@@ -48,10 +48,14 @@ function setup() {
   ground.addImage("ground",groundImage);
   ground.x = ground.width /2;
   
-  //sprite game over
+   gameOver = createSprite(300,100);
+  gameOver.addImage(gameOverImg);
   
-  //sprite restart
+  restart = createSprite(300,140);
+  restart.addImage(restartImg);
   
+  gameOver.scale = 0.5;
+  restart.scale = 0.5;  
   
   
   invisibleGround = createSprite(200,190,400,10);
