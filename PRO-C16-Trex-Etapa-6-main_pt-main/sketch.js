@@ -142,7 +142,7 @@ function draw() {
 
 function spawnObstacles(){
  if (frameCount % 60 === 0){
-   var obstacle = createSprite(400,165,10,40);
+   var obstacle = createSprite(600,165,10,40);
    obstacle.velocityX = -6 
    
     //gerar obstáculos aleatórios
@@ -165,7 +165,7 @@ function spawnObstacles(){
    
     //atribuir escala e vida útil ao obstáculo           
     obstacle.scale = 0.5;
-    obstacle.lifetime = 300;
+    obstacle.lifetime = 100;
    
    //adicione cada obstáculo ao grupo
     obstaclesGroup.add(obstacle);
@@ -182,7 +182,7 @@ function spawnClouds() {
     cloud.velocityX = -3;
     
      //atribuir tempo de vida à variável
-    cloud.lifetime = 134;
+    cloud.lifetime = 200;
     
     //ajustar a profundidade
     cloud.depth = trex.depth;
