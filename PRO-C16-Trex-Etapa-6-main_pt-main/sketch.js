@@ -48,7 +48,7 @@ function setup() {
   ground.addImage("ground",groundImage);
   ground.x = ground.width /2;
   
-   gameOver = createSprite(300,100);
+  gameOver = createSprite(300,100);
   gameOver.addImage(gameOverImg);
   
   restart = createSprite(300,140);
@@ -82,7 +82,8 @@ function draw() {
   
   
   if(gameState === PLAY){
-    //visibilidade false
+    restart.visible = false
+    gameOver.visible = false
     //mover o solo
     ground.velocityX = -6;
     //pontuação
@@ -115,7 +116,8 @@ function draw() {
     }
   }
    else if (gameState === END) {
-      //visibilidade true
+      restart.visible = true
+      gameOver.visible = true
      
       ground.velocityX = 0;
       trex.velocityY = 0
